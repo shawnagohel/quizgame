@@ -31,7 +31,7 @@ function initQuiz() {
             quizContainerEl.setAttribute("class","container");
             let currentQuestion = 1;
             let score = 0;
-    //  After a player starts the quiz, the time remaining variable is assigned a value equal to 15 seconds * the number of questions and starts decreasing by 1 each second
+    
             timeRemaining=numQuestions * 15;
             timeRemainingEl.setAttribute("value",timeRemaining);
 
@@ -48,7 +48,7 @@ function initQuiz() {
             },1000);
             let clickTimeout = false;
             function generateQuestion(questionNum) {
-                //  During the quiz, the header has the current question, and the answer buttons have the possible answers for that question
+                //  After the quiz starts the header has the question, and the buttons have a choice of answers for the question.
                 quizContainerEl.innerHTML = "";
                 rowEl = document.createElement("div");
                 rowEl.setAttribute("class","row");
@@ -95,7 +95,7 @@ function initQuiz() {
                     buttonEl.innerHTML = questions[currentQuestion-1].choices[i];
                     colEl2.append(buttonEl);
                     buttonEl.addEventListener("click",function(){
-                        //  When the user clicks one of the answer buttons, if it is the correct answer, the message "Correct" is displayed, and if not, the message "Incorrect" is displayed and 15 seconds deducted from the timer
+                        //  Display correct or incorrect and subtract 5 seconds
                         if (clickTimeout) {
                             return;
                         }
@@ -113,10 +113,10 @@ function initQuiz() {
                         let parEl = document.createElement("p");
                         colEl.append(parEl);
                         if (this.innerHTML === questions[currentQuestion - 1].answer) {
-                            parEl.innerHTML = "Correct!";
+                            parEl.innerHTML = "Correct-Nice Job!";
                         } else {
-                            parEl.innerHTML = "Incorrect";
-                            timeRemaining = timeRemaining - 15;
+                            parEl.innerHTML = "Incorrect-Keep Trying!";
+                            timeRemaining = timeRemaining - 5;
                             if (timeRemaining < 0) {
                                 timeRemaining = 0;
                             }
@@ -127,7 +127,7 @@ function initQuiz() {
                             score = timeRemaining;
                         }
                         setTimeout(function() {
-                            // When an answer is chosen, pause the timer and show the result for 2 seconds before loading the next question
+                            // Pause the timer for 2 seconds to show answer then proceed to the next question.
                             if (currentQuestion>questions.length) {
                                 // Move to the results page
                                 quizContainerEl.setAttribute("class","container d-none");
