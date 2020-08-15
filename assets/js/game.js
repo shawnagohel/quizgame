@@ -1,9 +1,9 @@
 function initQuiz() {
-    //  Initialize "time remaining" variable
+    //  Start "time remaining"
         let timeRemaining=0;
     
         
-    //  Clicking the "Start Quiz" button starts the quiz, hides the landing container, and displays the quiz container
+    //  Clicking the Start button starts the quiz, hides the landing container, and displays the quiz container
         const startButtonEl = document.getElementById("start-button");
         const timeRemainingEl = document.getElementById("time-remaining");
         const finalScoreEl = document.getElementById("final-score");
@@ -15,7 +15,7 @@ function initQuiz() {
         const highscoreButtonEl = document.getElementById("highscore-button");
         const highscoreContainerEl = document.getElementById("highscore-container");
         let highScores = [];
-            //  Method to store and retrieve arrays in/from local storage obtained from https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+            
         if (JSON.parse(localStorage.getItem('scores')) !== null) {
             highScores = JSON.parse(localStorage.getItem("scores"));
         }
@@ -31,14 +31,14 @@ function initQuiz() {
             quizContainerEl.setAttribute("class","container");
             let currentQuestion = 1;
             let score = 0;
-    //  Upon starting the quiz, the time remaining variable is assigned a value equal to 15 seconds * the number of questions and starts decreasing by 1 each second
+    //  After a player starts the quiz, the time remaining variable is assigned a value equal to 15 seconds * the number of questions and starts decreasing by 1 each second
             timeRemaining=numQuestions * 15;
             timeRemainingEl.setAttribute("value",timeRemaining);
-            //  Method for stopping the interval once it has started obtained from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+
             let myInterval = setInterval(function() {
                 if (timeRemaining<1) {
                     clearInterval(myInterval);
-                    //  When the final question is answered or the timer reaches zero, the quiz container is hidden and the score container is displayed, where the user enters their initials
+                    //  Player enters initials at end of game.
                     quizContainerEl.setAttribute("class","container d-none");
                     finalContainerEl.setAttribute("class","container");
                     return;
