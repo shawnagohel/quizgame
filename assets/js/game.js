@@ -24,10 +24,10 @@ function initQuiz() {
             
             
             landingContainerEl.setAttribute("class","container d-none");
-            let rowEl = null;
-            let colEl = null;
-            let headerEl = null;
-            let buttonEl = null;
+            let rowEl;
+            let colEl;
+            let headerEl;
+            let buttonEl;
             quizContainerEl.setAttribute("class","container");
             let currentQuestion = 1;
             let score = 0;
