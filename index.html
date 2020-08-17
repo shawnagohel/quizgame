@@ -13,7 +13,7 @@
         <div class="container navbar-container mx-0">
             <div class="row w-100">
                 <div class="col-4 col-md-2">
-                    <button type="button" id="highscore-button" class="btn btn-info">Highest Scores</button> 
+                    <button type="button" id="highscore-button" class="btn btn-info">HIGH SCORE</button> 
                 </div>
                 <div class="col-3 col-md-7"></div>
                 <div class="col-5 col-md-3">
@@ -38,12 +38,12 @@
         </div>
         <div class="row mb-3">
             <div class="col-12 text-center">
-                <p>Try and answer all the questions correctly before the timer runs out!  Any incorrect answers will subtract 15 seconds from the timer.  The more time left on the clock when all questions are answered correctly, the higher your score! GOOD LUCK!</p>
+                <p>Up for the Challenge? Try and answer all the questions correctly before the timer runs out!  Any incorrect answers will subtract 5 seconds from the timer.  The more time you have left on the clock when all the questions are answered correctly, the higher your score! GOOD LUCK!</p>
             </div>
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <button id="start-button" type="button" class="btn btn-secondary btn-lg">Start Quiz</button>
+                <button id="start-button" type="button" class="btn btn-secondary btn-lg">START GAME</button>
             </div>
         </div>
     </div>
@@ -56,12 +56,13 @@
             <div class="col-12 text-center">
                 <form>
                     <div class="form-group row">
-                        <label for="final-score" class="col-sm-7 col-form-label">Final Score</label>
+                        <label for="final-score" class="col-sm-7 col-form-label">FINAL SCORE</label>
                         <div class="col-sm-5">
                             <input type="number" readonly class="form-control" id="final-score" placeholder="0">
                         </div>
                     </div>
                 </form>
+                <!-- Enter Initials after the player has completed game  -->
                 <form>
                     <div class="form-group">
                       <label for="initials-entry">Initials</label>
@@ -72,6 +73,7 @@
             </div>
         </div>
     </div>
+    <!-- High Score List -->
     <div id="highscore-container" class="container d-none">
         <div class="row">
             <div class="col-2"></div>
@@ -85,7 +87,7 @@
             <div class="col-2"></div>
         </div>
     </div>
-
+<!-- Javascript files  -->
     <script src="assets/js/gamequestions.js"></script>
     <script src="assets/js/game.js"></script>
 </body>
