@@ -18,13 +18,17 @@ WHEN the game is over
 THEN I can save my initials and score
 
 
-## URL TO DEPLOY GAME
+## SCREENSHOT
 https://github.com/shawnagohel/quizgame/blob/master/IMAGES/Screen%20Shot%202020-08-16%20at%208.15.37%20PM.png
+
+https://github.com/shawnagohel/quizgame/blob/master/IMAGES/Screen%20Shot%202020-08-16%20at%208.15.51%20PM.png
+
 
 https://github.com/shawnagohel/quizgame/blob/master/IMAGES/Screen%20Shot%202020-08-16%20at%208.16.07%20PM.png
 
 
 
-## SCREENSHOT
 
+## URL TO DEPLOY GAME
+https://shawnagohel.github.io/quizgame/index.html
 
